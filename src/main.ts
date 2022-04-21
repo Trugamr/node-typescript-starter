@@ -1,3 +1,1 @@
-console.log("It works 🙉");
-
-const message = "hello world";
+console.log('hello')
