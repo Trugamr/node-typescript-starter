@@ -8,7 +8,7 @@
 		"format": "biome format --write .",
 		"lint": "biome lint --apply .",
 		"typecheck": "tsc",
-		"build": "node --no-warnings --import tsx --env-file .env ./build.ts",
+		"build": "node --no-warnings --import tsx ./build.ts",
 		"start": "node --no-warnings --env-file .env ./dist/main.js"
 	},
 	"author": "trugamr",
