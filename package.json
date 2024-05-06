@@ -1,32 +1,30 @@
 {
-  "name": "node-typescript-starter",
-  "version": "1.0.0",
-  "description": "Node JS and Typescript starter template",
-  "main": "dist/main.js",
-  "scripts": {
-    "build": "rimraf dist && tsc",
-    "start:dev": "nodemon",
-    "lint": "eslint . --ext .ts",
-    "prettier-format": "prettier --config .prettierrc.json src/**/*.ts --write",
-    "start": "node dist/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "trugamr",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^17.0.25",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint": "^8.13.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.3"
-  },
-  "dependencies": {
-    "eslint-plugin-import": "^2.26.0"
-  }
+	"name": "node-typescript-starter",
+	"version": "0.0.0",
+	"type": "module",
+	"main": "./dist/main.js",
+	"scripts": {
+		"dev": "node --no-warnings --import tsx --env-file .env --watch --watch-path ./src ./src/main.ts",
+		"format": "biome format --write .",
+		"lint": "biome lint --apply .",
+		"typecheck": "tsc",
+		"build": "node --no-warnings --import tsx --env-file .env ./build.ts",
+		"start": "node --no-warnings --env-file .env ./dist/main.js"
+	},
+	"author": "trugamr",
+	"dependencies": {
+		"pino": "^9.0.0",
+		"pino-pretty": "^11.0.0",
+		"zod": "^3.23.6"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.7.3",
+		"@types/node": "^20.12.8",
+		"esbuild": "^0.20.2",
+		"tsx": "^4.9.3",
+		"typescript": "5.5.0-beta"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
 }
